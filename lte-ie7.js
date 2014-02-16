@@ -1,0 +1,4 @@
+window.onload=function(){function addIcon(el,entity){var html=el.innerHTML;el.innerHTML='<span style="font-family: \'icomoon\'">'+entity+'</span>'+html;}
+var icons={'icon-twitter':'&#xe000;','icon-behance':'&#xe001;','icon-dribbble':'&#xe002;','icon-arrow-down':'&#xe003;','icon-pin':'&#xe004;','icon-gear':'&#xe005;','icon-star':'&#xe006;','icon-instagram':'&#xe007;','icon-soundcloud':'&#xe008;','icon-linkedin':'&#xe009;','icon-circles':'&#xe00a;','icon-envelope':'&#xe00b;','icon-hangout':'&#xe00c;','icon-arrow-up':'&#xe00d;','icon-heart':'&#xe00e;','icon-heart-2':'&#xe00f;','icon-hyperlink':'&#xe010;'},els=document.getElementsByTagName('*'),i,attr,html,c,el;for(i=0;;i+=1){el=els[i];if(!el){break;}
+attr=el.getAttribute('data-icon');if(attr){addIcon(el,attr);}
+c=el.className;c=c.match(/icon-[^\s'"]+/);if(c&&icons[c[0]]){addIcon(el,icons[c[0]]);}}};
